@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Военно-космическая академия им. А.Ф. Можайского</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Экран: лендинг -->
+  <div class="screen screen--landing" id="screen-landing">
+    <header class="header">
+      <div class="header__logo">
+        <div class="logo-text">
+          <span class="logo-title">Военно-космическая академия им. А.Ф. Можайского</span>
+          <span class="logo-tagline">Летим к звёздам.</span>
+        </div>
+      </div>
+      <div class="header__lang">
+        <button type="button" class="lang-btn" aria-label="Язык">RU</button>
+      </div>
+    </header>
+
+    <main class="hero">
+      <section class="hero__content">
+        <h1 class="hero__title">
+          <span class="hero__title-ma">МА</span><span class="hero__title-f">Ф.</span>
+        </h1>
+        <p class="hero__subtitle">Можайский Александр Фёдорович</p>
+        <p class="hero__desc">Простые решения для сложных задач.</p>
+        <div class="hero__actions">
+          <button type="button" class="btn btn--primary" id="btn-go-chat">ПЕРЕЙТИ В ЧАТ</button>
+          <button type="button" class="btn btn--outline">УЗНАТЬ ПОДРОБНЕЕ</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Экран: чат -->
+  <div class="screen screen--chat" id="screen-chat" hidden>
+    <header class="chat-header">
+      <button type="button" class="chat-header__back" id="close-chat" aria-label="Назад">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Назад
+      </button>
+      <span class="chat-header__title">Чат с МАФ</span>
+    </header>
+    <div class="chat__messages" id="chat-messages">
+      <div class="msg msg--bot">
+        <span class="msg__text">Здравствуйте! Задайте вопрос — постараюсь помочь.</span>
+      </div>
+    </div>
+    <form class="chat__form" id="chat-form">
+      <button type="button" class="chat__voice" id="chat-voice" aria-label="Голосовой ввод" title="Голосовой ввод">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg>
+      </button>
+      <textarea class="chat__input" id="chat-input" placeholder="Введите сообщение или нажмите микрофон..." rows="1" maxlength="2000"></textarea>
+      <button type="submit" class="chat__send" aria-label="Отправить">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      </button>
+    </form>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+# Секреты — не коммитить
+.env
+.env.local
+.env.*.local
+
+# Сборка Go
+/server
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Тестовые и временные
+*.test
+*.out
+tmp/
+temp/
+
+# IDE и ОС
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Логи
+*.log
